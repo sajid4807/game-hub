@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Pubg",
+    "coverPhoto": "https://i.ibb.co.com/yF7y1vSW/PUBG.webp",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Valorant",
+    "coverPhoto": "https://i.ibb.co.com/LD5DTbbJ/valorant.jpg",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com/",
+    "description": "Valorant is a tactical 5v5 shooter combining precise gunplay and unique agent abilities for competitive gameplay.",
+    "ratings": "4.7",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "3",
+    "title": "Among Us",
+    "coverPhoto": "https://i.ibb.co.com/Txr5y09q/among.jpg",
+    "category": "Party",
+    "downloadLink": "https://innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a social deduction game where crewmates work together to complete tasks while impostors attempt to sabotage them.",
+    "ratings": "4.3",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "4",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co.com/qM0ScR1L/minecarft.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft allows players to build, explore, and survive in an open blocky world filled with endless possibilities.",
+    "ratings": "4.8",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "5",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co.com/NdH3f7Lq/genshin.jpg",
+    "category": "Adventure",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact is an open-world action RPG where players explore the magical world of Teyvat and uncover its mysteries.",
+    "ratings": "4.6",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "6",
+    "title": "Fortnite",
+    "coverPhoto": "https://i.ibb.co.com/qYbGYhY5/fortnite.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/",
+    "description": "Fortnite offers a vibrant, fast-paced battle royale experience with creative building mechanics and dynamic events.",
+    "ratings": "4.4",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "7",
+    "title": "Stardew Valley",
+    "coverPhoto": "https://i.ibb.co.com/rfGYQ5WC/stardew.jpg",
+    "category": "Simulation",
+    "downloadLink": "https://www.stardewvalley.net/",
+    "description": "Stardew Valley lets players build a farm, form relationships, and explore a peaceful rural community full of charm.",
+    "ratings": "4.9",
+    "developer": "ConcernedApe"
+  },
+  {
+    "id": "8",
+    "title": "Hades",
+    "coverPhoto": "https://i.ibb.co.com/5xWcGJ11/hases.png",
+    "category": "Action",
+    "downloadLink": "https://www.supergiantgames.com/games/hades/",
+    "description": "Hades is a roguelike dungeon crawler where you defy the god of death using powerful weapons and divine abilities.",
+    "ratings": "4.8",
+    "developer": "Supergiant Games"
+  },
+  {
+    "id": "9",
+    "title": "Celeste",
+    "coverPhoto": "https://i.ibb.co.com/Vc079VSN/celeste.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.celestegame.com/",
+    "description": "Celeste challenges players to climb a mysterious mountain through precise platforming and emotional storytelling.",
+    "ratings": "4.7",
+    "developer": "Maddy Makes Games"
+  },
+  {
+    "id": "10",
+    "title": "Hollow Knight",
+    "coverPhoto": "https://i.ibb.co.com/SD2dXHNN/hollow.jpg",
+    "category": "Metroidvania",
+    "downloadLink": "https://www.hollowknight.com/",
+    "description": "Hollow Knight is a beautifully hand-drawn adventure through an ancient, insect-filled kingdom full of secrets and challenges.",
+    "ratings": "4.9",
+    "developer": "Team Cherry"
+  }
+]
