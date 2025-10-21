@@ -79,7 +79,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto mt-6">
+    <div className="relative w-full max-w-6xl mx-auto my-20">
       <Slider {...settings}>
         {games.map((game) => (
           <div key={game.id} className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
