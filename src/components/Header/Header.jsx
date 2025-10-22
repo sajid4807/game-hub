@@ -22,7 +22,7 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm px-44">
+    <div className="navbar bg-base-100 shadow-sm px-44 bg-gradient-to-r from-[#c2e9fb] via-[#fefefe] to-[#fceabb]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,7 +55,7 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Button</a>
       </div>
     </div>
   );

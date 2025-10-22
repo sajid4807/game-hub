@@ -104,7 +104,7 @@ const Banner = () => {
                   href={game.downloadLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm sm:text-base"
+                  className="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white px-4 py-2 rounded-full text-sm sm:text-base"
                 >
                   <FaGooglePlay /> Play Store
                 </a>
@@ -112,7 +112,7 @@ const Banner = () => {
                   href={game.downloadLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm sm:text-base"
+                  className="flex items-center gap-2 bg-gradient-to-r from-yellow-400 via-red-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm sm:text-base"
                 >
                   <FaAppStoreIos /> App Store
                 </a>
