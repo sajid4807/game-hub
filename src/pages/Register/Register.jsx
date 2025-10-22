@@ -1,12 +1,19 @@
 
+// import { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
+import { use } from "react";
 
 const Register = () => {
 
+    const {createUser,setUser} = use(AuthContext)
 
+    
+    
+    
     const handleRegister =e => {
         e.preventDefault()
-        console.log('clicked handle register')
         const form = e.target
         const name = form.name.value
         const email = form.email.value
@@ -14,8 +21,25 @@ const Register = () => {
         const password = form.password.value
         console.log({name,email,photo,password})
 
-        // createUserWithEmailAndPasswo
-        // createUserWithEmailAndPassword
+
+          
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if(!passwordRegex.test(password)){
+            toast.error("❌ Password must be At least one uppercase and one lowercase letter andMinimum 6 characters");
+            return;
+        }
+
+        createUser(email,password)
+        .then(res => {
+            console.log(res.user)
+            const user = res.user
+            setUser(user)
+        })
+        .catch(error => {
+            toast.error(error.message)
+            console.log(error.message)
+        })
+
         
     }
 
@@ -56,6 +80,7 @@ const Register = () => {
                   name="name"
                   placeholder="Enter Your Name"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  required
                 />
               </div>
                 {/* email */}
@@ -66,6 +91,7 @@ const Register = () => {
                   name="email"
                   placeholder="Enter your Email"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  required
                 />
               </div>
               {/* Photo URL */}
@@ -76,6 +102,7 @@ const Register = () => {
                   name="photo"
                   placeholder="Photo URL"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  required
                 />
                 
               </div>
@@ -90,6 +117,7 @@ const Register = () => {
                   name="password"
                   placeholder="Enter Your Password"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  required
                 />
                 <span
                 //   onClick={() => setShow(!show)}
@@ -100,17 +128,17 @@ const Register = () => {
               </div>
 
               <button type="submit" className="btn text-white bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 w-full">
-                Sign Up
+                Register
               </button>
 
               <div className="text-center mt-3">
                 <p className="text-sm text-white/80">
                   Already have an account?{" "}
                   <Link
-                    to="/signin"
-                    className="text-pink-300 hover:text-white font-medium underline"
+                    to="/login"
+                    className="text-pink-500 hover:text-white font-medium underline"
                   >
-                    Sign in
+                    Log in
                   </Link>
                 </p>
               </div>

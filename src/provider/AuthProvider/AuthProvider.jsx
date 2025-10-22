@@ -1,22 +1,37 @@
-// import { createUserWithEmailAndPassword } from "firebase/auth/cordova";
-// import { createUserWithEmailAndPassword } from "firebase/auth/web-extension";
-import {  createContext, useState } from "react";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import {  createContext, useEffect, useState } from "react";
+import { auth } from "../../firebase/firebase.config";
 
 export const AuthContext = createContext()
 const AuthProvider = ({children}) => {
 
-    const [user,setUser] = useState({
-        user:'hablu'
-    })
+    const [user,setUser] = useState(null)
 
-    const registerLogin = () => {
-        createUserWithEmailAndPassword
+    const createUser = (email,password) => {
+        return createUserWithEmailAndPassword(auth,email,password)
     }
+    const logOut = () =>{
+        return signOut(auth)
+    }
+    const Login = (email,password) =>{
+        return signInWithEmailAndPassword(auth,email,password)
+    }
+    useEffect(() =>{
+        const unsubscribe = onAuthStateChanged(auth, (currentUser)=> {
+            setUser(currentUser)
+        });
+        return ()=>{
+            unsubscribe()
+        }
+    },[])
 
 
 const authData = {
     user,
-    setUser
+    setUser,
+    createUser,
+    logOut,
+    Login
 }
 
     return <AuthContext value={authData}>

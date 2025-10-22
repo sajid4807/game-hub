@@ -1,7 +1,19 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import MyLink from "../MyLink/MyLink";
+import { use } from "react";
+import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 
 const Header = () => {
+
+
+  const {user,logOut} = use(AuthContext)
+
+  const handleLogOut = () =>{
+    // console.log("clicked log out")
+    logOut()
+  }
+
+
   const links = (
     <>
       <li>
@@ -51,11 +63,17 @@ const Header = () => {
         </div>
         <NavLink to="/">GameHub</NavLink>
       </div>
+      <div>{user && user.email}</div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Button</a>
+        {
+          user ? 
+          <button onClick={handleLogOut} className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Logout</button> : 
+          <Link to='/login' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Login</Link>
+        }
+        {/* <a className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Button</a> */}
       </div>
     </div>
   );

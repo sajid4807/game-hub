@@ -5,7 +5,12 @@ const Login = () => {
 
 
 
-const handleLogin = ()=>{
+const handleLogin = e=>{
+    e.preventDefault()
+    const form = e.target
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log({email,password})
 
     }
 
@@ -56,25 +61,27 @@ const handleLogin = ()=>{
                 <h2 className="text-2xl w-full font-semibold mb-2 text-center text-white">
                   Sign In
                 </h2>
-
+                    {/* email */}
                 <div>
                   <label className="block text-sm mb-1">Email</label>
                   <input
                     type="email"
                     name="email"
-                    placeholder="example@email.com"
+                    placeholder="Enter Your Email"
                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    required
                   />
                 </div>
-
+                    {/* password */}
                 <div className="relative">
                   <label className="block text-sm mb-1">Password</label>
                   <input
                     // type={show ? "text" : "password"}
                     type="password"
                     name="password"
-                    placeholder="••••••••"
+                    placeholder="Enter Your Password"
                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    required
                   />
                   <span
                     // onClick={() => setShow(!show)}
@@ -112,10 +119,10 @@ const handleLogin = ()=>{
                 <p className="text-center text-sm text-white/80 mt-3">
                   Don’t have an account?{" "}
                   <Link
-                    to="/signup"
-                    className="text-pink-300 hover:text-white underline"
+                    to="/register"
+                    className="text-yellow-500 hover:text-white underline"
                   >
-                    Sign up
+                    Register
                   </Link>
                 </p>
               </form>
