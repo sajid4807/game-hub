@@ -5,7 +5,7 @@
     "coverPhoto": "https://i.ibb.co.com/yF7y1vSW/PUBG.webp",
     "category": "FPS",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
-    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps. Each match drops you onto an island filled with weapons, vehicles, and equipment, where up to 100 players compete to be the last one standing. Players must scavenge for resources, plan tactical movements, and stay within the shrinking safe zone to avoid elimination. The game offers multiple modes, including classic battle royale, arcade matches, and team deathmatch, appealing to both casual and competitive players. With constant updates, seasonal events, and customizable characters, PUBG Mobile continues to deliver thrilling and unpredictable gameplay experiences that test reflexes and teamwork alike.",
     "ratings": "4.5",
     "developer": "Krafton"
   },
@@ -15,17 +15,17 @@
     "coverPhoto": "https://i.ibb.co.com/LD5DTbbJ/valorant.jpg",
     "category": "FPS",
     "downloadLink": "https://playvalorant.com/",
-    "description": "Valorant is a tactical 5v5 shooter combining precise gunplay and unique agent abilities for competitive gameplay.",
+    "description": "Valorant is a tactical 5v5 shooter combining precise gunplay and unique agent abilities for competitive gameplay. Each agent has special powers that can turn the tide of battle, from healing teammates to deploying smokes and recon tools. Players must work together, strategize, and adapt to the opposing team’s playstyle to secure objectives. Valorant’s ranked system rewards skill and teamwork, while its detailed maps encourage creative plays and communication. The game’s vibrant art style, regular content updates, and esports scene make it a staple for fans of strategic shooters. Riot Games continues to refine the balance, ensuring that every match feels competitive, fair, and rewarding for both new and veteran players.",
     "ratings": "4.7",
     "developer": "Riot Games"
   },
   {
     "id": "3",
     "title": "Among Us",
-    "coverPhoto": "https://i.ibb.co.com/yn2NNnZP/among2.png",
+    "coverPhoto": "https://i.ibb.co.com/Txr5y09q/among.jpg",
     "category": "Party",
     "downloadLink": "https://innersloth.com/gameAmongUs.php",
-    "description": "Among Us is a social deduction game where crewmates work together to complete tasks while impostors attempt to sabotage them.",
+    "description": "Among Us is a social deduction game where crewmates work together to complete tasks while impostors attempt to sabotage them. The game thrives on communication, deception, and trust, as players must discuss suspicious behavior and vote out impostors before it’s too late. Simple controls and colorful visuals make it accessible to players of all ages, while its unpredictable nature keeps every session fresh. Customization options and different map designs add variety to gameplay. Whether you’re fixing the ship or secretly plotting sabotage, every round is filled with laughter, tension, and clever strategy. Among Us remains one of the most iconic multiplayer experiences for both casual and party gamers worldwide.",
     "ratings": "4.3",
     "developer": "Innersloth"
   },
@@ -35,7 +35,7 @@
     "coverPhoto": "https://i.ibb.co.com/qM0ScR1L/minecarft.jpg",
     "category": "Sandbox",
     "downloadLink": "https://www.minecraft.net/",
-    "description": "Minecraft allows players to build, explore, and survive in an open blocky world filled with endless possibilities.",
+    "description": "Minecraft allows players to build, explore, and survive in an open blocky world filled with endless possibilities. Players can gather resources, craft tools, and design intricate structures limited only by their imagination. Whether playing in survival mode, where danger lurks at night, or creative mode, where players can freely build, Minecraft encourages creativity and problem-solving. Multiplayer servers offer massive worlds and custom game modes, making it a social hub for millions. With frequent updates, mods, and a passionate community, the game continues to evolve and inspire. From educational use to massive creative projects, Minecraft stands as one of the most influential and enduring video games ever created.",
     "ratings": "4.8",
     "developer": "Mojang Studios"
   },
@@ -45,7 +45,7 @@
     "coverPhoto": "https://i.ibb.co.com/NdH3f7Lq/genshin.jpg",
     "category": "Adventure",
     "downloadLink": "https://genshin.hoyoverse.com/",
-    "description": "Genshin Impact is an open-world action RPG where players explore the magical world of Teyvat and uncover its mysteries.",
+    "description": "Genshin Impact is an open-world action RPG where players explore the magical world of Teyvat and uncover its mysteries. Each region is inspired by real-world cultures, filled with stunning landscapes, elemental puzzles, and dynamic combat. Players can switch between characters in battle, combining elemental powers for powerful combos. The game’s rich lore, memorable characters, and emotional storytelling make exploration deeply rewarding. Frequent updates introduce new areas, story chapters, and limited-time events that keep the experience fresh. Beyond combat, players can cook, glide, fish, and build teams to suit their playstyle. Genshin Impact continues to set new standards for mobile and console adventures, blending beauty, strategy, and exploration seamlessly.",
     "ratings": "4.6",
     "developer": "HoYoverse"
   },
@@ -55,7 +55,7 @@
     "coverPhoto": "https://i.ibb.co.com/qYbGYhY5/fortnite.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://www.epicgames.com/fortnite/",
-    "description": "Fortnite offers a vibrant, fast-paced battle royale experience with creative building mechanics and dynamic events.",
+    "description": "Fortnite offers a vibrant, fast-paced battle royale experience with creative building mechanics and dynamic events. Players can gather materials, construct defenses, and outlast opponents in matches full of chaos and creativity. Constant collaborations with major franchises bring new skins, weapons, and storylines, making Fortnite a pop culture phenomenon. Beyond battle royale, the Creative mode lets players design custom maps and experiences, while Save the World provides cooperative gameplay against waves of enemies. Regular seasonal updates keep the gameplay exciting, introducing new mechanics and live events. With its cross-platform accessibility and community-driven innovation, Fortnite continues to shape the modern gaming landscape and redefine online multiplayer entertainment.",
     "ratings": "4.4",
     "developer": "Epic Games"
   },
@@ -65,7 +65,7 @@
     "coverPhoto": "https://i.ibb.co.com/rfGYQ5WC/stardew.jpg",
     "category": "Simulation",
     "downloadLink": "https://www.stardewvalley.net/",
-    "description": "Stardew Valley lets players build a farm, form relationships, and explore a peaceful rural community full of charm.",
+    "description": "Stardew Valley lets players build a farm, form relationships, and explore a peaceful rural community full of charm. Starting with a small plot of land, players can cultivate crops, raise animals, mine for resources, and expand their homestead at their own pace. The town’s residents each have unique stories and personalities, creating meaningful connections through festivals and events. Fishing, cooking, and crafting add depth to daily life, while exploring the mines offers adventure and challenge. Its relaxing pace and nostalgic pixel art style make it both soothing and addictive. Stardew Valley’s continued updates and mod support keep players returning to their cozy farms year after year.",
     "ratings": "4.9",
     "developer": "ConcernedApe"
   },
@@ -75,7 +75,7 @@
     "coverPhoto": "https://i.ibb.co.com/5xWcGJ11/hases.png",
     "category": "Action",
     "downloadLink": "https://www.supergiantgames.com/games/hades/",
-    "description": "Hades is a roguelike dungeon crawler where you defy the god of death using powerful weapons and divine abilities.",
+    "description": "Hades is a roguelike dungeon crawler where you defy the god of death using powerful weapons and divine abilities. You play as Zagreus, the rebellious son of Hades, attempting to escape the Underworld through procedurally generated challenges. Each run offers new combinations of powers granted by Olympian gods, creating endless strategic possibilities. The game blends fast-paced combat, beautiful art, and rich storytelling seamlessly. Dialogues evolve as players progress, rewarding persistence with emotional depth and humor. Its soundtrack, voice acting, and replayability make it a masterpiece of modern game design. Hades delivers both heart-pounding action and a surprisingly touching narrative about family, resilience, and freedom.",
     "ratings": "4.8",
     "developer": "Supergiant Games"
   },
@@ -85,7 +85,7 @@
     "coverPhoto": "https://i.ibb.co.com/Vc079VSN/celeste.jpg",
     "category": "Platformer",
     "downloadLink": "https://www.celestegame.com/",
-    "description": "Celeste challenges players to climb a mysterious mountain through precise platforming and emotional storytelling.",
+    "description": "Celeste challenges players to climb a mysterious mountain through precise platforming and emotional storytelling. Each level tests reflexes and patience, with tight controls that reward mastery. The game follows Madeline’s journey of self-discovery and perseverance, blending challenging gameplay with heartfelt narrative themes. Hidden secrets, assist modes, and collectibles offer accessibility for all players. Its pixel art visuals and beautiful soundtrack create an unforgettable atmosphere. Celeste isn’t just about reaching the top—it’s about facing inner struggles and finding strength through adversity. The game has become a beloved classic, praised for its emotional impact and perfectly tuned mechanics that inspire determination and hope.",
     "ratings": "4.7",
     "developer": "Maddy Makes Games"
   },
@@ -95,7 +95,7 @@
     "coverPhoto": "https://i.ibb.co.com/SD2dXHNN/hollow.jpg",
     "category": "Metroidvania",
     "downloadLink": "https://www.hollowknight.com/",
-    "description": "Hollow Knight is a beautifully hand-drawn adventure through an ancient, insect-filled kingdom full of secrets and challenges.",
+    "description": "Hollow Knight is a beautifully hand-drawn adventure through an ancient, insect-filled kingdom full of secrets and challenges. Players explore interconnected environments, battle fierce enemies, and uncover the lore of a fallen civilization. The game rewards curiosity, offering new abilities and upgrades that unlock previously inaccessible areas. Atmospheric music and fluid combat make exploration both thrilling and haunting. Every encounter feels deliberate, from hidden bosses to mysterious NPCs that reveal fragments of the story. Its difficulty is balanced by fair mechanics and stunning design, creating a world that feels alive and tragic. Hollow Knight stands as a masterpiece of exploration and emotional storytelling in modern gaming.",
     "ratings": "4.9",
     "developer": "Team Cherry"
   },
@@ -105,7 +105,7 @@
     "coverPhoto": "https://i.ibb.co.com/N6WhwyWd/rocket.jpg",
     "category": "Sports",
     "downloadLink": "https://www.rocketleague.com/",
-    "description": "Rocket League is a high-octane blend of soccer and rocket-powered cars with fast-paced online multiplayer matches.",
+    "description": "Rocket League is a high-octane blend of soccer and rocket-powered cars with fast-paced online multiplayer matches. Players use acrobatic stunts and precision control to score goals in arenas filled with dynamic movement and explosive action. The game offers casual and competitive modes, making it accessible for newcomers yet challenging for pros. Frequent seasonal updates introduce new cars, maps, and cosmetic rewards. Its physics-based gameplay ensures every match feels unique and unpredictable. Rocket League’s thriving esports scene and cross-platform play bring together millions of fans worldwide. It remains one of the most exciting and skill-driven competitive games that perfectly combines creativity, speed, and teamwork.",
     "ratings": "4.6",
     "developer": "Psyonix"
   },
@@ -115,7 +115,7 @@
     "coverPhoto": "https://i.ibb.co.com/ZRmDnpNr/terraia.jpg",
     "category": "Sandbox",
     "downloadLink": "https://terraria.org/",
-    "description": "Terraria is a 2D sandbox adventure game where players explore, build, battle, and survive in a procedurally generated world.",
+    "description": "Terraria is a 2D sandbox adventure game where players explore, build, battle, and survive in a procedurally generated world. With countless biomes, items, and enemies, every playthrough feels new and exciting. Players can craft tools, construct elaborate bases, and face powerful bosses that test skill and creativity. Exploration rewards curiosity, revealing treasures and hidden dungeons beneath the surface. Multiplayer mode enhances the fun, allowing friends to cooperate or compete in shaping their worlds. Terraria’s blend of combat, crafting, and exploration provides endless replay value. Its charming pixel art style and consistent updates have cemented it as one of the most beloved indie titles in gaming history.",
     "ratings": "4.7",
     "developer": "Re-Logic"
   }

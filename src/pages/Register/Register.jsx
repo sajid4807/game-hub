@@ -1,6 +1,6 @@
 
 // import { use } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { use, useState } from "react";
@@ -8,21 +8,25 @@ import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
+  
+  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
-    const {createUser,setUser} = use(AuthContext)
+    const {createUser,setUser,profile} = use(AuthContext)
 
     const [show, setShow] =useState(false)
+    // const [passwordError,setPasswordError] =useState('')
     
     
     
     const handleRegister =e => {
         e.preventDefault()
         const form = e.target
-        const name = form.name.value
+        const displayName = form.name.value
         const email = form.email.value
-        const photo = form.photo.value
+        const photoURL = form.photo.value
         const password = form.password.value
-        console.log({name,email,photo,password})
+        // console.log({email,password})
 
 
           
@@ -35,15 +39,25 @@ const Register = () => {
         createUser(email,password)
         .then(res => {
             console.log(res.user)
+            toast.success('Register successful.')
             const user = res.user
-            setUser(user)
+            profile({displayName,photoURL})
+            .then(() => {
+                setUser(...user,displayName,photoURL)
+        navigate(`${location.state ? location.state :'/'}`)
+
+            })
+            .catch(error =>{
+                // console.log(error.message)
+                setUser(user)
+            })
         })
         .catch(error => {
             toast.error(error.message)
             console.log(error.message)
         })
 
-        
+        e.target.reset()
     }
 
     

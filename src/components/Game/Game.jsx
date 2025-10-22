@@ -10,7 +10,15 @@ const Game = ({ game }) => {
         </figure>
         <div className=" p-5">
           <h2 className="font-bold text-2xl text-[#3A3A3A] ">{title}</h2>
-          <p className="text-sm my-2">{description}</p>
+          {/* <p className="text-sm my-2">{description}</p> */}
+
+
+           <p className="text-sm my-2">
+          {description.length > 140 ? `${description.slice(0, 140)}...` : description}
+          
+        </p>
+
+
           <div className="">
             <button className="btn w-full bg-gradient-to-r from-yellow-500 via-red-400 to-pink-400 text-white">
               Install Now

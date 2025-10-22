@@ -26,11 +26,13 @@ const Header = () => {
           All Game
         </MyLink>
       </li>
-      {/* <li>
-        <MyLink to="/login" className="">
-          Login
-        </MyLink>
-      </li> */}
+      <li>
+        {
+          user ? <MyLink to="/profile" className="">
+          Profile
+        </MyLink> :""
+        }
+      </li>
     </>
   );
   return (
@@ -63,17 +65,22 @@ const Header = () => {
         </div>
         <NavLink to="/">GameHub</NavLink>
       </div>
-      <div>{user && user.email}</div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end gap-7">
-        <NavLink to='/register' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Register</NavLink>
-
+      <div className="navbar-end">
         {
           user ? 
-          <button onClick={handleLogOut} className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Logout</button> : 
-          <Link to='/login' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Login</Link>
+          <div className="flex gap-5 items-center">
+            <div>
+              <Link to='/profile'><img src={user?.photoURL} alt="" className="w-12 h-12 rounded-full" /></Link>
+            </div>
+            <button onClick={handleLogOut} className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Logout</button> 
+          </div> : 
+          <div className="flex gap-7" >
+            <NavLink to='/register' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Register</NavLink>
+            <Link to='/login' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Login</Link> 
+          </div>
         }
         {/* <a className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Button</a> */}
       </div>

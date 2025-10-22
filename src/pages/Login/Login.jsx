@@ -1,5 +1,5 @@
 import { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
@@ -10,6 +10,10 @@ const Login = () => {
 
     const {Login,setUser,googleLogin} =use(AuthContext)
     const [show,setShow] =useState(false)
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    // const [error,serError] =useState('')
 
 
 
@@ -22,11 +26,14 @@ const handleLogin = e=>{
     Login(email,password)
     .then(res => {
         toast.success("log in successfully")
-        console.log(res.user)
+        // console.log(res.user)
         setUser(res.user)
+        navigate(`${location.state ? location.state : '/'}`)
     })
     .catch(error => {
-        console.log(error.message)
+        toast.error(error.message)
+        // serError(error.message)
+        // console.log(error.message)
     })
     }
 
@@ -34,9 +41,12 @@ const handleLogin = e=>{
         googleLogin()
         .then(res => {
             console.log(res.user)
+            // setUser(res.user)
         })
         .catch(error => {
-            console.log(error.message)
+            toast.error(error.message)
+            // serError(error.message)
+            // console.log(error.message)
         })
     }
 
@@ -119,6 +129,9 @@ const handleLogin = e=>{
                   </span>
                 <p className="mt-2 cursor-pointer hover:text-blue-300">Forget Password</p>
                 </div>
+                {/* {
+                    error && <p>{error}</p>
+                } */}
 
                 <button type="submit" className="btn text-white bg-gradient-to-r from-yellow-500 via-red-600 to-pink-600 w-full">
                   Login
