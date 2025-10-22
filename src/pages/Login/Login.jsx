@@ -1,7 +1,15 @@
+import { use, useState } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
 
+    const {Login,setUser,googleLogin} =use(AuthContext)
+    const [show,setShow] =useState(false)
 
 
 
@@ -11,7 +19,25 @@ const handleLogin = e=>{
     const email = form.email.value;
     const password = form.password.value;
     console.log({email,password})
+    Login(email,password)
+    .then(res => {
+        toast.success("log in successfully")
+        console.log(res.user)
+        setUser(res.user)
+    })
+    .catch(error => {
+        console.log(error.message)
+    })
+    }
 
+    const handleGoogleSignin =()=>{
+        googleLogin()
+        .then(res => {
+            console.log(res.user)
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
     }
 
 
@@ -33,7 +59,7 @@ const handleLogin = e=>{
           {/* Left section */}
           <div className="max-w-lg text-center lg:text-left">
             <h1 className="text-5xl font-extrabold drop-shadow-lg">
-              Welcome Back
+              Login your account
             </h1>
             <p className="mt-4 text-lg text-white/80 leading-relaxed">
               Sign in to continue your journey. Manage your account, explore new
@@ -59,7 +85,7 @@ const handleLogin = e=>{
          
               <form onSubmit={handleLogin} className="space-y-5">
                 <h2 className="text-2xl w-full font-semibold mb-2 text-center text-white">
-                  Sign In
+                  LogIn
                 </h2>
                     {/* email */}
                 <div>
@@ -77,7 +103,8 @@ const handleLogin = e=>{
                   <label className="block text-sm mb-1">Password</label>
                   <input
                     // type={show ? "text" : "password"}
-                    type="password"
+
+                    type={show ? "text" : "password"}
                     name="password"
                     placeholder="Enter Your Password"
                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -85,10 +112,12 @@ const handleLogin = e=>{
                   />
                   <span
                     // onClick={() => setShow(!show)}
-                    className="absolute right-[8px] top-[36px] cursor-pointer z-50"
+                    onClick={() => setShow(!show)}
+                    className="absolute right-[10px] top-[32px] cursor-pointer z-50"
                   >
-                    {/* {show ? <FaEye /> : <IoEyeOff />} */}
+                    {show ? <FaEye size={24} /> : <IoEyeOff size={24} />}
                   </span>
+                <p className="mt-2 cursor-pointer hover:text-blue-300">Forget Password</p>
                 </div>
 
                 <button type="submit" className="btn text-white bg-gradient-to-r from-yellow-500 via-red-600 to-pink-600 w-full">
@@ -96,24 +125,20 @@ const handleLogin = e=>{
                 </button>
 
                 {/* Divider */}
-                <div className="flex items-center justify-center gap-2 my-2">
-                  <div className="h-px w-16 bg-white/30"></div>
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="h-px w-32 bg-white/30"></div>
                   <span className="text-sm text-white/70">or</span>
-                  <div className="h-px w-16 bg-white/30"></div>
+                  <div className="h-px w-32 bg-white/30"></div>
                 </div>
 
                 {/* Google Signin */}
                 <button
                   type="button"
-                //   onClick={handleGoogleSignin}
-                  className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
+                  onClick={handleGoogleSignin}
+                  className="btn text-white flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-500 via-red-600 to-pink-600 px-5 py-2 rounded-lg w-full font-semibold  cursor-pointer"
                 >
-                  <img
-                    src="https://www.svgrepo.com/show/475656/google-color.svg"
-                    alt="google"
-                    className="w-5 h-5"
-                  />
-                  Continue with Google
+                  <FcGoogle size={24} />
+                  Login with Google
                 </button>
 
                 <p className="text-center text-sm text-white/80 mt-3">

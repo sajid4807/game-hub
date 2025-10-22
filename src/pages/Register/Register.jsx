@@ -3,12 +3,15 @@
 import { Link } from "react-router";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
-import { use } from "react";
+import { use, useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
 
     const {createUser,setUser} = use(AuthContext)
 
+    const [show, setShow] =useState(false)
     
     
     
@@ -113,17 +116,17 @@ const Register = () => {
                 </label>
                 <input
                 //   type={show ? "text" : "password"}
-                type="password"
+                type={show ? "text" : 'password'}
                   name="password"
                   placeholder="Enter Your Password"
                   className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
                   required
                 />
                 <span
-                //   onClick={() => setShow(!show)}
-                  className="absolute right-[8px] top-[36px] cursor-pointer z-50"
+                  onClick={() => setShow(!show)}
+                  className="absolute right-[10px] top-[32px] cursor-pointer z-50"
                 >
-                  {/* {show ? <FaEye /> : <IoEyeOff />} */}
+                  {show ? <FaEye size={24} /> : <IoEyeOff size={24} />}
                 </span>
               </div>
 

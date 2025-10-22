@@ -17,20 +17,20 @@ const Header = () => {
   const links = (
     <>
       <li>
-        <MyLink to="/" className="">
+        <MyLink to="/">
           Home
         </MyLink>
       </li>
       <li>
-        <MyLink to="/register" className="">
-          Register
+        <MyLink to="/game">
+          All Game
         </MyLink>
       </li>
-      <li>
+      {/* <li>
         <MyLink to="/login" className="">
           Login
         </MyLink>
-      </li>
+      </li> */}
     </>
   );
   return (
@@ -67,7 +67,9 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end gap-7">
+        <NavLink to='/register' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Register</NavLink>
+
         {
           user ? 
           <button onClick={handleLogOut} className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Logout</button> : 

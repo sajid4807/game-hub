@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 // PopularGame Component
 const PopularGame = () => {
+
   const [games, setGames] = useState([]);
 
   useEffect(() => {
@@ -19,7 +21,8 @@ const PopularGame = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 px-4">
+    // <Link to={`/gameDetails/${id}`}>
+      <div className="max-w-[1250px] mx-auto mt-10 px-4">
       <h2 className="text-3xl font-bold mb-10 text-center">Popular Games</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {games.map((game) => (
@@ -55,6 +58,7 @@ const PopularGame = () => {
         ))}
       </div>
     </div>
+    // </Link>
   );
 };
 

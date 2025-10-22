@@ -1,0 +1,25 @@
+import { Link } from "react-router";
+
+const Game = ({ game }) => {
+  const { id,coverPhoto, title, description } = game;
+  return (
+    <Link to={`/gameDetails/${id}`}>
+      <div className="card bg-base-100 w-96 shadow-sm">
+        <figure>
+          <img src={coverPhoto} className="h-[245px]" alt="Game" />
+        </figure>
+        <div className=" p-5">
+          <h2 className="font-bold text-2xl text-[#3A3A3A] ">{title}</h2>
+          <p className="text-sm my-2">{description}</p>
+          <div className="">
+            <button className="btn w-full bg-gradient-to-r from-yellow-500 via-red-400 to-pink-400 text-white">
+              Install Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export default Game;

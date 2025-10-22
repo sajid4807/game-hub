@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Among Us",
-    "coverPhoto": "https://i.ibb.co.com/Txr5y09q/among.jpg",
+    "coverPhoto": "https://i.ibb.co.com/yn2NNnZP/among2.png",
     "category": "Party",
     "downloadLink": "https://innersloth.com/gameAmongUs.php",
     "description": "Among Us is a social deduction game where crewmates work together to complete tasks while impostors attempt to sabotage them.",
@@ -98,5 +98,25 @@
     "description": "Hollow Knight is a beautifully hand-drawn adventure through an ancient, insect-filled kingdom full of secrets and challenges.",
     "ratings": "4.9",
     "developer": "Team Cherry"
+  },
+  {
+    "id": "11",
+    "title": "Rocket League",
+    "coverPhoto": "https://i.ibb.co.com/N6WhwyWd/rocket.jpg",
+    "category": "Sports",
+    "downloadLink": "https://www.rocketleague.com/",
+    "description": "Rocket League is a high-octane blend of soccer and rocket-powered cars with fast-paced online multiplayer matches.",
+    "ratings": "4.6",
+    "developer": "Psyonix"
+  },
+  {
+    "id": "12",
+    "title": "Terraria",
+    "coverPhoto": "https://i.ibb.co.com/ZRmDnpNr/terraia.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://terraria.org/",
+    "description": "Terraria is a 2D sandbox adventure game where players explore, build, battle, and survive in a procedurally generated world.",
+    "ratings": "4.7",
+    "developer": "Re-Logic"
   }
 ]
