@@ -1,5 +1,6 @@
 import { use } from "react";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
+import { Link } from "react-router";
 
 const Profile = () => {
     const {user} =use(AuthContext)
@@ -14,6 +15,7 @@ const Profile = () => {
   <figure className="lg:w-4/12">
     <img
       src={user?.photoURL}
+      className="w-36 h-36 rounded-full"
       alt="Photo" />
   </figure>
   <div className="lg:w-4/12">
@@ -22,7 +24,7 @@ const Profile = () => {
     <p>Email :</p>
     <p className="font-medium mb-2">{user?.email}</p>
     <div className="">
-      <button className="btn btn-primary">Update Profile</button>
+      <Link to='/updateProfile' className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Update Profile</Link>
     </div>
   </div>
 </div>

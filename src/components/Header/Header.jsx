@@ -1,16 +1,22 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import MyLink from "../MyLink/MyLink";
 import { use } from "react";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
+import profileImg from '../../assets/sajid.jpg';
 
 const Header = () => {
+
+  const navigate = useNavigate()
+    const location = useLocation()
 
 
   const {user,logOut} = use(AuthContext)
 
   const handleLogOut = () =>{
     // console.log("clicked log out")
+
     logOut()
+    navigate(`${location.state ? location.state :'/' }`)
   }
 
 
@@ -73,7 +79,7 @@ const Header = () => {
           user ? 
           <div className="flex gap-5 items-center">
             <div>
-              <Link to='/profile'><img src={user?.photoURL} alt="" className="w-12 h-12 rounded-full" /></Link>
+              <Link to='/profile'><img src={`${user ? user?.photoURL : profileImg}`} alt="" className="w-12 h-12 rounded-full" /></Link>
             </div>
             <button onClick={handleLogOut} className="btn bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white">Logout</button> 
           </div> : 

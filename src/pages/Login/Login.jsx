@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
@@ -12,6 +12,9 @@ const Login = () => {
     const [show,setShow] =useState(false)
     const navigate = useNavigate()
     const location = useLocation()
+    // const emailRef = useRef(null);
+    const [email, setEmail] = useState("");
+
 
     // const [error,serError] =useState('')
 
@@ -22,10 +25,10 @@ const handleLogin = e=>{
     const form = e.target
     const email = form.email.value;
     const password = form.password.value;
-    console.log({email,password})
+    // console.log({email,password})
     Login(email,password)
     .then(res => {
-        toast.success("log in successfully")
+        toast.success("log in successfully 🎉")
         // console.log(res.user)
         setUser(res.user)
         navigate(`${location.state ? location.state : '/'}`)
@@ -41,6 +44,7 @@ const handleLogin = e=>{
         googleLogin()
         .then(res => {
             console.log(res.user)
+            toast.success("Google Login successful! 🎉");
             // setUser(res.user)
         })
         .catch(error => {
@@ -72,8 +76,8 @@ const handleLogin = e=>{
               Login your account
             </h1>
             <p className="mt-4 text-lg text-white/80 leading-relaxed">
-              Sign in to continue your journey. Manage your account, explore new
-              features, and more.
+              Sign in to continue your journey. Manage your Gaming account, explore new
+              game.
             </p>
           </div>
 
@@ -104,6 +108,9 @@ const handleLogin = e=>{
                     type="email"
                     name="email"
                     placeholder="Enter Your Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    // ref={emailRef}
                     className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     required
                   />
@@ -117,7 +124,7 @@ const handleLogin = e=>{
                     type={show ? "text" : "password"}
                     name="password"
                     placeholder="Enter Your Password"
-                    className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="input mb-1 input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     required
                   />
                   <span
@@ -127,7 +134,8 @@ const handleLogin = e=>{
                   >
                     {show ? <FaEye size={24} /> : <IoEyeOff size={24} />}
                   </span>
-                <p className="mt-2 cursor-pointer hover:text-blue-300">Forget Password</p>
+                  <Link to='/forgetPassword'  state={{ email: email }} className="cursor-pointer hover:text-blue-300">Forget Password</Link>
+                {/* <p className="mt-2 cursor-pointer hover:text-blue-300">Forget Password</p> */}
                 </div>
                 {/* {
                     error && <p>{error}</p>

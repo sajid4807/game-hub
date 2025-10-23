@@ -21,7 +21,7 @@ const Game = ({ game }) => {
 
           <div className="">
             <button className="btn w-full bg-gradient-to-r from-yellow-500 via-red-400 to-pink-400 text-white">
-              Install Now
+              View Details
             </button>
           </div>
         </div>

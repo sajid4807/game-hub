@@ -9,6 +9,8 @@ import Profile from "../pages/Profile/Profile";
 import PrivateRoute from "../provider/PrivateRoute/PrivateRoute";
 import Loading from "../components/Loading/Loading";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import ForgetPassword from "../pages/ForgetPassword/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ export const router = createBrowserRouter([
     path:"/profile",
     element:<Profile></Profile>
   },
+   {
+    path:'/updateProfile',
+    element:<UpdateProfile/>
+  },
+  {
+    path:'/forgetPassword',
+    element:<ForgetPassword/>
+  },
       {
         path:'/game',
         element:<AllGame/>,
@@ -51,6 +61,7 @@ export const router = createBrowserRouter([
     loader:() => fetch('/gameData.json'),
     // hydrateFallbackElement:<h2>error</h2>
   },
+ 
   {
     path: "/*",
     element: <ErrorPage/>,

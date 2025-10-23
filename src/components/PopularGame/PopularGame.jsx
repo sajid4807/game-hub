@@ -12,22 +12,23 @@ const PopularGame = () => {
       .then((res) => res.json())
       .then((data) => {
         // Sort by rating descending and take top 3
-        const topGames = data
+        const topRating = data
           .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
           .slice(0, 3);
-        setGames(topGames);
+        setGames(topRating);
       })
-      .catch((err) => console.error("Error loading data:", err));
+      .catch((error) => console.error("Error loading data:", error));
   }, []);
 
+
   return (
-    // <Link to={`/gameDetails/${id}`}>
       <div className="max-w-[1250px] mx-auto mt-10 px-4">
       <h2 className="text-3xl font-bold mb-10 text-center">Popular Games</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {games.map((game) => (
+          <Link key={game.id} to={`/gameDetails/${game.id}`}>
           <div
-            key={game.id}
+            // key={game.id}
             className="relative rounded-lg overflow-hidden shadow-lg group hover:scale-105 transition-transform duration-300"
           >
             {/* Game cover */}
@@ -45,20 +46,21 @@ const PopularGame = () => {
                 <FaStar className="text-yellow-400 mr-1" />
                 <span>{game.ratings}</span>
               </div>
-              <a
+              {/* <a
                 href={game.downloadLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-center px-3 py-1 rounded-full text-sm"
               >
                 Download
-              </a>
+              </a> */}
             </div>
           </div>
+          </Link>
+          
         ))}
       </div>
     </div>
-    // </Link>
   );
 };
 

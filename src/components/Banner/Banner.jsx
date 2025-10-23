@@ -96,7 +96,9 @@ const Banner = () => {
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 sm:px-6">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{game.title}</h2>
               <p className="max-w-xl sm:max-w-2xl mb-4 text-sm sm:text-base md:text-lg">
-                {game.description}
+          {game?.description.length > 140 ? `${game.description.slice(0, 140)}...` : game.description}
+
+                {/* {game.description} */}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
