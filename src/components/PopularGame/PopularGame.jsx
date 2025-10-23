@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
+import { toast } from "react-toastify";
 
 // PopularGame Component
 const PopularGame = () => {
@@ -17,7 +18,10 @@ const PopularGame = () => {
           .slice(0, 3);
         setGames(topRating);
       })
-      .catch((error) => console.error("Error loading data:", error));
+      .catch((error) =>{
+        toast.error("Error loading data:", error)
+        //  console.error("Error loading data:", error)
+      });
   }, []);
 
 

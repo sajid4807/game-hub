@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { FaGooglePlay, FaAppStoreIos } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { toast } from "react-toastify";
 
 // slick-carousel CSS
 // import "slick-carousel/slick/slick.css";
@@ -44,7 +45,10 @@ const Banner = () => {
     fetch("/gameData.json")
       .then((res) => res.json())
       .then((data) => setGames(data.slice(0, 5)))
-      .catch((err) => console.error("Error loading data:", err));
+      .catch((err) => {
+        toast.error("Error loading data:", err)
+        // console.error("Error loading data:", err)
+      });
   }, []);
 
   // Slick settings with responsive breakpoints

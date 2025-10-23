@@ -1,12 +1,12 @@
 import { use } from "react";
 import { AuthContext } from "../../provider/AuthProvider/AuthProvider";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
     const {user,profile,setUser}=use(AuthContext)
     
-    const location = useLocation()
+    // const location = useLocation()
     const navigate = useNavigate()
 
     const handleUpdate = e =>{
@@ -22,15 +22,16 @@ const UpdateProfile = () => {
                 const user = res.user
                 setUser(...user,displayName,photoURL)
                 // navigate(`${location.state ? location.state : '/'}`)
-                navigate(`${location.state? location.state :'/profile'}`)
-        // navigate(`${location.state ? location.state :'/profile'}`)
-
+                // navigate(`${location.state? location.state :'/profile'}`)
+                // navigate(`${location.state ? location.state :'/profile'}`)
+                
             })
             .catch(error =>{
                 // console.log(error.message)
                 // setUser(user)
                 toast.error(error.code)
             })
+            navigate('/profile')
         // console.log({displayName,photoURL})
     }
     return (

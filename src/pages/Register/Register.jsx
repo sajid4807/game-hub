@@ -39,7 +39,7 @@ const Register = () => {
 
         createUser(email,password)
         .then(res => {
-            console.log(res.user)
+            // console.log(res.user)
             toast.success('Register successful 🎉')
             const user = res.user
             profile({displayName,photoURL})
@@ -57,7 +57,7 @@ const Register = () => {
         })
         .catch(error => {
             toast.error(error.message)
-            console.log(error.message)
+            // console.log(error.message)
         })
 
         e.target.reset()

@@ -43,7 +43,7 @@ const handleLogin = e=>{
     const handleGoogleSignin =()=>{
         googleLogin()
         .then(res => {
-            console.log(res.user)
+            // console.log(res.user)
             toast.success("Google Login successful! 🎉");
             // setUser(res.user)
         })
