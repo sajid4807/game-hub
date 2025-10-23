@@ -21,7 +21,8 @@ export const router = createBrowserRouter([
     children:[
       {
         index:true,
-        element:<Home/>
+        element:<Home/>,
+        hydrateFallbackElement:<Loading/>
       },
       {
         path:'/login',
@@ -46,7 +47,8 @@ export const router = createBrowserRouter([
       {
         path:'/game',
         element:<AllGame/>,
-        loader:() => fetch("/gameData.json")
+        loader:() => fetch("/gameData.json"),
+        hydrateFallbackElement:<Loading/>
       }
 
     ]
@@ -59,12 +61,13 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader:() => fetch('/gameData.json'),
+    hydrateFallbackElement:<Loading/>
     // hydrateFallbackElement:<h2>error</h2>
   },
  
   {
     path: "/*",
-    element: <ErrorPage/>,
+    element:<ErrorPage/>
   },
 
 ]);

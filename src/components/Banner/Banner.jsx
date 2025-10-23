@@ -1,24 +1,10 @@
-// const Banner = () => {
-//     return (
-//         <div className="my-5">
-//             <h3>banner</h3>
-//         </div>
-//     );
-// };
-
-// export default Banner;
-
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { FaGooglePlay, FaAppStoreIos } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { toast } from "react-toastify";
+import Loading from "../Loading/Loading";
 
-// slick-carousel CSS
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// Custom Arrow Components
 const NextArrow = ({ onClick }) => (
   <div
     className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-white/30 hover:bg-white/60 p-2 md:p-3 rounded-full"
@@ -39,17 +25,35 @@ const PrevArrow = ({ onClick }) => (
 
 const Banner = () => {
   const [games, setGames] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // লোডিং স্টেট ট্র্যাক করার জন্য
 
   // Load JSON from public folder
   useEffect(() => {
     fetch("/gameData.json")
       .then((res) => res.json())
-      .then((data) => setGames(data.slice(0, 5)))
+      .then((data) => {
+        setGames(data.slice(0, 5))
+        setIsLoading(false);
+        
+      })
+
+      
       .catch((err) => {
         toast.error("Error loading data:", err)
         // console.error("Error loading data:", err)
+                setIsLoading(false); 
+
       });
   }, []);
+
+
+  if (isLoading) {
+    return (
+      <div className="w-full flex justify-center items-center my-20">
+        <Loading /> 
+      </div>
+    );
+  }
 
   // Slick settings with responsive breakpoints
   const settings = {

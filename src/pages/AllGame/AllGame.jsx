@@ -4,6 +4,7 @@ import Game from "../../components/Game/Game";
 const AllGame = () => {
 
     const allGame = useLoaderData()
+    // const isLoading = navigation.state === 'loading';
     // console.log(allGame)
     return (
         <div className="max-w-[1250px] mx-auto my-10">
@@ -13,6 +14,7 @@ const AllGame = () => {
             </div>
             <div className="grid grid-cols-3 gap-5">
                 {
+                    
                     allGame.map(game => <Game key={game.id} game={game}></Game>)
                 }
             </div>

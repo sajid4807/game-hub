@@ -8,6 +8,8 @@ const UpdateProfile = () => {
     
     // const location = useLocation()
     const navigate = useNavigate()
+        // const [isLoading, setIsLoading] = useState(false); 
+
 
     const handleUpdate = e =>{
         e.preventDefault()
@@ -16,11 +18,17 @@ const UpdateProfile = () => {
         const displayName = form.name.value
         const photoURL = form.photo.value
         // profile()
+                // setIsLoading(true); 
+
         profile({displayName,photoURL})
             .then((res) => {
                 toast.success('Successfully Update Profile 🎉')
                 const user = res.user
                 setUser(...user,displayName,photoURL)
+                                // setIsLoading(false); 
+            // navigate('/profile') 
+
+
                 // navigate(`${location.state ? location.state : '/'}`)
                 // navigate(`${location.state? location.state :'/profile'}`)
                 // navigate(`${location.state ? location.state :'/profile'}`)
@@ -30,7 +38,12 @@ const UpdateProfile = () => {
                 // console.log(error.message)
                 // setUser(user)
                 toast.error(error.code)
+                                // setIsLoading(false); 
+
             })
+                            // setIsLoading(false); 
+
+            // navigate('/profile') check this code later
             navigate('/profile')
         // console.log({displayName,photoURL})
     }

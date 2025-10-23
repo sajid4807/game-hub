@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 import { toast } from "react-toastify";
+import Loading from "../Loading/Loading";
 
 // PopularGame Component
 const PopularGame = () => {
 
   const [games, setGames] = useState([]);
+    const [isLoading, setIsLoading] = useState(true); 
+
 
   useEffect(() => {
     fetch("/gameData.json")
@@ -17,12 +20,25 @@ const PopularGame = () => {
           .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
           .slice(0, 3);
         setGames(topRating);
+                setIsLoading(false); 
+
       })
       .catch((error) =>{
         toast.error("Error loading data:", error)
+                setIsLoading(false); 
+
         //  console.error("Error loading data:", error)
       });
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="w-full flex justify-center items-center my-20">
+        <Loading />
+      </div>
+    );
+  }
+
 
 
   return (

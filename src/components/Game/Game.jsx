@@ -1,7 +1,28 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import Loading from "../Loading/Loading";
 
 const Game = ({ game }) => {
   const { id,coverPhoto, title, description } = game;
+
+    const [isLoading, setIsLoading] = useState(true);
+
+      useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); 
+    }, 1000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
+   if (isLoading) {
+    return (
+      <div className="w-full flex justify-center items-center my-20">
+        <Loading /> 
+      </div>
+    );
+  }
+
   return (
     <Link to={`/gameDetails/${id}`}>
       <div className="card bg-base-100 w-96 shadow-sm">
