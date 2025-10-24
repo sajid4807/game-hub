@@ -25,37 +25,30 @@ const PrevArrow = ({ onClick }) => (
 
 const Banner = () => {
   const [games, setGames] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // লোডিং স্টেট ট্র্যাক করার জন্য
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Load JSON from public folder
   useEffect(() => {
     fetch("/gameData.json")
       .then((res) => res.json())
       .then((data) => {
-        setGames(data.slice(0, 5))
+        setGames(data.slice(0, 5));
         setIsLoading(false);
-        
       })
 
-      
       .catch((err) => {
-        toast.error("Error loading data:", err)
-        // console.error("Error loading data:", err)
-                setIsLoading(false); 
-
+        toast.error("Error loading data:", err);
+        setIsLoading(false);
       });
   }, []);
-
 
   if (isLoading) {
     return (
       <div className="w-full flex justify-center items-center my-20">
-        <Loading /> 
+        <Loading />
       </div>
     );
   }
 
-  // Slick settings with responsive breakpoints
   const settings = {
     dots: true,
     infinite: true,
@@ -69,28 +62,31 @@ const Banner = () => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1024, // Tablet
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 640, // Mobile
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false, // hide arrows on small screens
+          arrows: false,
         },
       },
     ],
   };
 
   return (
-    <div className="relative w-full max-w-[1250px] mx-auto my-20">
+    <div className="relative w-full max-w-[1250px] mx-auto my-10 lg:my-20">
       <Slider {...settings}>
         {games.map((game) => (
-          <div key={game.id} className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
+          <div
+            key={game.id}
+            className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]"
+          >
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -102,9 +98,13 @@ const Banner = () => {
 
             {/* Overlay content */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 sm:px-6">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{game.title}</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                {game.title}
+              </h2>
               <p className="max-w-xl sm:max-w-2xl mb-4 text-sm sm:text-base md:text-lg">
-          {game?.description.length > 140 ? `${game.description.slice(0, 140)}...` : game.description}
+                {game?.description.length > 140
+                  ? `${game.description.slice(0, 140)}...`
+                  : game.description}
 
                 {/* {game.description} */}
               </p>

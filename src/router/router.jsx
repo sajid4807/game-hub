@@ -50,7 +50,6 @@ export const router = createBrowserRouter([
         loader:() => fetch("/gameData.json"),
         hydrateFallbackElement:<Loading/>
       }
-
     ]
   },
   {
@@ -62,12 +61,9 @@ export const router = createBrowserRouter([
     ),
     loader:() => fetch('/gameData.json'),
     hydrateFallbackElement:<Loading/>
-    // hydrateFallbackElement:<h2>error</h2>
   },
- 
   {
     path: "/*",
     element:<ErrorPage/>
   },
-
 ]);

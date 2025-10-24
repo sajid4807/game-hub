@@ -19,26 +19,19 @@ const ErrorId = () => {
           />
         </svg>
       </div>
-
-      {/* Title */}
       <h1 className="text-5xl md:text-6xl font-extrabold text-gray-800 mb-4">
-        Item Not Found
+        Details Page Not Found
       </h1>
-
-      {/* Message */}
       <p className="text-gray-600 text-center mb-6 max-w-md">
-        The item you are looking for does not exist, may have been removed, or the ID is incorrect.
+        The item you are looking for does not exist, may have been removed, or
+        the ID is incorrect.
       </p>
-
-      {/* Go Home Button */}
       <Link
         to="/game"
         className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-lg hover:bg-blue-700 transition-all duration-300"
       >
         Browse All Games
       </Link>
-
-      {/* Optional Illustration */}
       <div className="mt-10">
         <img
           src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif"
