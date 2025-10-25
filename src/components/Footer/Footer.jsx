@@ -14,7 +14,6 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-
         <nav>
           <h6 className="footer-title">Social</h6>
           <div className="grid grid-flow-col gap-4">
