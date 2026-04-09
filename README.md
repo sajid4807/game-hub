@@ -31,7 +31,3 @@
 - **Backend / Auth**: Firebase Authentication  
 - **SEO & Meta**: React Helmet  
 - **Others**: @tailwindcss  
-
----
-
-## 📂 Project Structure
