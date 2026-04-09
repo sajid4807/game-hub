@@ -9,6 +9,11 @@
 
 ---
 
+## 📸 Screenshot
+<img src="https://i.ibb.co.com/3nnJZK1/image.png" alt="Game Hub Screenshot" />
+
+---
+
 ## ✨ Key Features
 
 - 🏠 **Homepage** – Browse featured games  
@@ -31,3 +36,11 @@
 - **Backend / Auth**: Firebase Authentication  
 - **SEO & Meta**: React Helmet  
 - **Others**: @tailwindcss  
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/sajid4807/game-hub.git
